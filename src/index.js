@@ -1,4 +1,4 @@
-import { Character } from './character.js';
+// import Character from './character.js';
 
 export default class Team {
   constructor() {
@@ -11,34 +11,30 @@ export default class Team {
     }
     this.members.add(value.name);
   }
+
+  addAll(...args) {
+    for (const arg of args) {
+      this.members.add(arg);
+    }
+  }
+
+  toArray() {
+    return [...this.members];
+  }
 }
-const team = new Team();
-const ch1 = new Character('George Clooney');
-team.add(ch1);
-console.log(team);
-const ch2 = new Character('Lady Gaga');
-team.add(ch2);
-console.log(team);
-const ch3 = new Character('Lady Gaga');
-team.add(ch3);
-console.log(team);
-
-// const ch3 = new Character('George Clooney');
-// const ch4 = new Character('George Clooney');
-// const ch5 = new Character('George Clooney');
-// const ch6 = new Character('George Clooney');
-// const ch7 = new Character('George Clooney');
-// const ch8 = new Character('George Clooney');
-// ch1.addPerson = 'Lady Gaga';
-// ch1.addPerson = 'Evgeniy Onegin';
-// ch1.addPerson = 'Vladimir Putin';
-// ch1.addPerson = 'Innokentiy Frolov';
-// ch1.addPerson = 'Roman Kushnarev';
-// ch1.addPerson = 'Roman Kushnarev';
-
-// console.log(arrayCharacter);
-// const team = new Team();
-// team.clear();
-// console.log(team);
-// console.log(team.add());
-// console.log(team);
+// const team1 = new Team();
+// const ch1 = new Character('George Clooney');
+// team1.add(ch1);
+// console.log(team1);
+// const ch2 = new Character('Lady Gaga');
+// team1.add(ch2);
+// console.log(team1);
+// const team2 = new Team();
+// console.log(team2);
+// team2.addAll('George Clooney', 'Lady Gaga', 'Roman Kushnarev');
+// console.log(team2);
+// console.log(team1.toArray());
+// console.log(team2.toArray());
+// const ch3 = new Character('Lady Gaga');
+// team1.add(ch3);
+// console.log(team1);

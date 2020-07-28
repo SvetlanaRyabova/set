@@ -1,5 +1,4 @@
-export const arrayCharacter = [];
-export class Character {
+export default class Character {
   constructor(name) {
     this.name = name;
   //  this.group();
